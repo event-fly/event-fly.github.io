@@ -73,8 +73,10 @@
       color: #333;
     }
   </style>
-</head>
 
+  <link rel="icon" href="./static/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/images/apple-touch-icon.png">
+</head>
 
 
 
@@ -82,6 +84,14 @@
 <body>
 
   <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
     <div class="navbar-menu">
       <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
         <a class="navbar-item">
@@ -157,30 +167,22 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2412.04383" target="_blank"
-                      class="external-link button is-dark"
-                      style="background-color: rgb(0, 180, 139);  color: white; border-color: rgb(0, 180, 139);">
-                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                      <span><b>Paper</b></span>
+                  <a href="https://arxiv.org/pdf/2412.04383" target="_blank" class="external-link button paper-btn">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span><b>Paper</b></span>
                   </a>
                 </span>
-                &nbsp;
+                &nbsp;&nbsp;&nbsp;
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2412.04383" target="_blank"
-                      class="external-link button is-dark"
-                      style="background-color: rgb(239, 99, 75); color: white; border-color: rgb(239, 99, 75);">
-                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                      <span><b>arXiv</b></span>
+                  <a href="https://arxiv.org/abs/2412.04383" target="_blank" class="external-link button arxiv-btn">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span><b>arXiv</b></span>
                   </a>
                 </span>
-                &nbsp;
+                &nbsp;&nbsp;&nbsp;
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2412.04383" target="_blank"
-                      class="external-link button is-dark"
-                      style="background-color: rgb(0, 180, 139); color: white; border-color: rgb(0, 180, 139);">
-                    <span class="icon">
-                        <i class="fab fa-youtube"></i>
-                    </span>
+                  <a href="https://arxiv.org/abs/2412.04383" target="_blank" class="external-link button video-btn">
+                    <span class="icon"><i class="fab fa-youtube"></i></span>
                     <span><b>Video</b></span>
                   </a>
                 </span>
@@ -296,7 +298,7 @@
         </h2>
         <div style="flex: 1; margin-right: 10px; text-align: center;">
           <video poster="" autoplay="" controls="" muted="" loop=""
-            style="border-radius: 10px; border: 1px solid #ccc; width: 90%;">
+            style="border-radius: 10px; border: 1px solid #ccc; width: 95%;">
             <source src="./static/videos/demo1.mp4" type="video/mp4">
           </video>
         </div>
@@ -323,7 +325,7 @@
         </h2>
         <div style="flex: 1; margin-right: 10px; text-align: center;">
           <video poster="" autoplay="" controls="" muted="" loop=""
-            style="border-radius: 10px; border: 1px solid #ccc; width: 90%;">
+            style="border-radius: 10px; border: 1px solid #ccc; width: 95%;">
             <source src="./static/videos/demo2.mp4" type="video/mp4">
           </video>
         </div>
@@ -350,7 +352,7 @@
         </h2>
         <div style="flex: 1; margin-right: 10px; text-align: center;">
           <video poster="" autoplay="" controls="" muted="" loop=""
-            style="border-radius: 10px; border: 1px solid #ccc; width: 90%;">
+            style="border-radius: 10px; border: 1px solid #ccc; width: 95%;">
             <source src="./static/videos/demo3.mp4" type="video/mp4">
           </video>
         </div>
@@ -363,10 +365,295 @@
   </section>
 
 
-
-
-
   <br/>
+
+
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width has-text-centered">
+            <h2 class="title is-3">
+              <span class="icon"><i class="fa fa-train"></i></span>&thinsp; Platform-Specific Semantic Distributions
+            </h2>
+            <p>The distributions of <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span>, <span style="color: rgb(239, 99, 75);"><b>Drone</b></span>, and <span style="color: rgb(99, 113, 250);"><b>Quadruped</b></span> are denoted by the <span style="color: rgb(0, 180, 139);"><b>&#8226; Green</b></span>, <span style="color: rgb(239, 99, 75);"><b>&#8226; Red</b></span>, and <span style="color: rgb(99, 113, 250);"><b>&#8226; Blue</b></span> colors, respectively.</p></br>
+          <div class="columns is-multiline">
+            <!-- Row 1 -->
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/road.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 1">
+              <p class="has-text-centered"><b>Road</b></p>
+            </div>
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/sidewalk.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 2">
+              <p class="has-text-centered"><b>Sidewalk</b></p>
+            </div>
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/building.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 3">
+              <p class="has-text-centered"><b>Building</b></p>
+            </div>
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/wall.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 4">
+              <p class="has-text-centered"><b>Wall</b></p>
+            </div>
+  
+            <!-- Row 2 -->
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/fence.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 5">
+              <p class="has-text-centered"><b>Fence</b></p>
+            </div>
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/pole.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 6">
+              <p class="has-text-centered"><b>Pole</b></p>
+            </div>
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/traffic-light.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 7">
+              <p class="has-text-centered"><b>Traffic Light</b></p>
+            </div>
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/traffic-sign.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 8">
+              <p class="has-text-centered"><b>Traffic Sign</b></p>
+            </div>
+  
+            <!-- Row 3 -->
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/vegetation.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 9">
+              <p class="has-text-centered"><b>Vegetation</b></p>
+            </div>
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/terrain.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 10">
+              <p class="has-text-centered"><b>Terrain</b></p>
+            </div>
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/sky.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 11">
+              <p class="has-text-centered"><b>Sky</b></p>
+            </div>
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/person.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 12">
+              <p class="has-text-centered"><b>Person</b></p>
+            </div>
+  
+            <!-- Row 4 -->
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/rider.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 13">
+              <p class="has-text-centered"><b>Rider</b></p>
+            </div>
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/car.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 14">
+              <p class="has-text-centered"><b>Car</b></p>
+            </div>
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/truck.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 15">
+              <p class="has-text-centered"><b>Truck</b></p>
+            </div>
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/bus.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 16">
+              <p class="has-text-centered"><b>Bus</b></p>
+            </div>
+  
+            <!-- Row 5 -->
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/train.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 17">
+              <p class="has-text-centered"><b>Train</b></p>
+            </div>
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/motorcycle.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 18">
+              <p class="has-text-centered"><b>Motorcycle</b></p>
+            </div>
+            <div class="column is-3">
+              <img src="./static/images/pie_charts/bicycle.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 19">
+              <p class="has-text-centered"><b>Bicycle</b></p>
+            </div>
+          </div><hr>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  </br>
+
+
+
+  <section class="section" style="margin-top: -40px;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width has-text-centered">
+          <h2 class="title is-3"><span class="icon"><i class="fa fa-tractor"></i></span>&thinsp;&thinsp; Semantic Distributions Maps</h2>
+          <table class="table is-bordered is-striped is-narrow is-hoverable" style="width: 100%;">
+            <thead>
+              <tr>
+                <th style="vertical-align: middle;">ID</th>
+                <th style="vertical-align: middle;">Class</th>
+                <th style="vertical-align: middle;">Type</th>
+                <th style="vertical-align: middle;"><img src="./static/images/vehicle.png" style="height: 24px;"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span></th>
+                <th style="vertical-align: middle;"><img src="./static/images/drone.png" style="height: 24px;"> <span style="color: rgb(239, 99, 75);"><b>Drone</b></span></th>
+                <th style="vertical-align: middle;"><img src="./static/images/quadruped.png" style="height: 24px;"> <span style="color: rgb(99, 113, 250);"><b>Quadruped</b></span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="vertical-align: middle;">0</td>
+                <td style="vertical-align: middle;"><code>road</code></td>
+                <td style="vertical-align: middle;">static</td>
+                <td><img src="./static/images/prior_vehicle/class_road_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_road_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_road_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">1</td>
+                <td style="vertical-align: middle;"><code>sidewalk</code></td>
+                <td style="vertical-align: middle;">static</td>
+                <td><img src="./static/images/prior_vehicle/class_sidewalk_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_sidewalk_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_sidewalk_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">2</td>
+                <td style="vertical-align: middle;"><code>building</code></td>
+                <td style="vertical-align: middle;">static</td>
+                <td><img src="./static/images/prior_vehicle/class_building_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_building_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_building_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">3</td>
+                <td style="vertical-align: middle;"><code>wall</code></td>
+                <td style="vertical-align: middle;">static</td>
+                <td><img src="./static/images/prior_vehicle/class_wall_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_wall_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_wall_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">4</td>
+                <td style="vertical-align: middle;"><code>fence</code></td>
+                <td style="vertical-align: middle;">static</td>
+                <td><img src="./static/images/prior_vehicle/class_fence_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_fence_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_fence_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">5</td>
+                <td style="vertical-align: middle;"><code>pole</code></td>
+                <td style="vertical-align: middle;">static</td>
+                <td><img src="./static/images/prior_vehicle/class_pole_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_pole_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_pole_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">6</td>
+                <td style="vertical-align: middle;"><code>traffic-light</code></td>
+                <td style="vertical-align: middle;">static</td>
+                <td><img src="./static/images/prior_vehicle/class_traffic-light_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_traffic-light_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_traffic-light_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">7</td>
+                <td style="vertical-align: middle;"><code>traffic-sign</code></td>
+                <td style="vertical-align: middle;">static</td>
+                <td><img src="./static/images/prior_vehicle/class_traffic-sign_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_traffic-sign_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_traffic-sign_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">8</td>
+                <td style="vertical-align: middle;"><code>vegetation</code></td>
+                <td style="vertical-align: middle;">static</td>
+                <td><img src="./static/images/prior_vehicle/class_vegetation_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_vegetation_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_vegetation_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">9</td>
+                <td style="vertical-align: middle;"><code>terrain</code></td>
+                <td style="vertical-align: middle;">static</td>
+                <td><img src="./static/images/prior_vehicle/class_terrain_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_terrain_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_terrain_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">10</td>
+                <td style="vertical-align: middle;"><code>sky</code></td>
+                <td style="vertical-align: middle;">static</td>
+                <td><img src="./static/images/prior_vehicle/class_sky_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_sky_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_sky_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">11</td>
+                <td style="vertical-align: middle;"><code>person</code></td>
+                <td style="vertical-align: middle;">dynamic</td>
+                <td><img src="./static/images/prior_vehicle/class_person_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_person_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_person_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">12</td>
+                <td style="vertical-align: middle;"><code>rider</code></td>
+                <td style="vertical-align: middle;">dynamic</td>
+                <td><img src="./static/images/prior_vehicle/class_rider_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_rider_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_rider_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">13</td>
+                <td style="vertical-align: middle;"><code>car</code></td>
+                <td style="vertical-align: middle;">dynamic</td>
+                <td><img src="./static/images/prior_vehicle/class_car_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_car_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_car_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">14</td>
+                <td style="vertical-align: middle;"><code>truck</code></td>
+                <td style="vertical-align: middle;">dynamic</td>
+                <td><img src="./static/images/prior_vehicle/class_truck_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_truck_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_truck_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">15</td>
+                <td style="vertical-align: middle;"><code>bus</code></td>
+                <td style="vertical-align: middle;">dynamic</td>
+                <td><img src="./static/images/prior_vehicle/class_bus_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_bus_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_bus_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">16</td>
+                <td style="vertical-align: middle;"><code>train</code></td>
+                <td style="vertical-align: middle;">dynamic</td>
+                <td><img src="./static/images/prior_vehicle/class_train_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_train_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_train_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">17</td>
+                <td style="vertical-align: middle;"><code>motorcycle</code></td>
+                <td style="vertical-align: middle;">dynamic</td>
+                <td><img src="./static/images/prior_vehicle/class_motorcycle_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_motorcycle_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_motorcycle_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">18</td>
+                <td style="vertical-align: middle;"><code>bicycle</code></td>
+                <td style="vertical-align: middle;">dynamic</td>
+                <td><img src="./static/images/prior_vehicle/class_bicycle_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_drone/class_bicycle_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_quadruped/class_bicycle_parula.png" style="height: 100px; object-fit: contain;"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  </br>
   
 
 
@@ -376,7 +663,7 @@
       <pre style="border-radius: 10px;"><code>@inproceedings{kong2025eventfly,
   title   = {EventFly: Event Camera Perception from Ground to the Sky},
   author  = {Lingdong Kong and Dongyue Lu and Xiang Xu and Lai Xing Ng and Wei Tsang Ooi and Benoit R. Cottereau},
-  journal = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  journal = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year    = {2025},
 }</code></pre>
   <hr>
