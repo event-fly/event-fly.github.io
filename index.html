@@ -260,7 +260,7 @@
 
   
 
-  <section class="section" style="margin-top: -100px;"></section>
+  <section class="section" style="margin-top: -90px;"></section>
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class=" column is-full-width has-text-centered">
@@ -479,7 +479,9 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full-width has-text-centered">
-          <h2 class="title is-3"><span class="icon"><i class="fa fa-tractor"></i></span>&thinsp;&thinsp; Semantic Distributions Maps</h2>
+          <h2 class="title is-3"><span class="icon">
+            <i class="fa fa-tractor"></i></span>&thinsp;&thinsp; Semantic Distributions Maps
+          </h2>
           <table class="table is-bordered is-striped is-narrow is-hoverable" style="width: 100%;">
             <thead>
               <tr>
@@ -647,6 +649,451 @@
             </tbody>
           </table>
         </div>
+      </div><hr>
+    </div>
+  </section>
+
+
+
+  </br>
+
+
+
+  <section class="section" style="margin-top: -40px;">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width has-text-centered">
+            <h2 class="title is-3">Platform Adaptation from 
+              <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span> to 
+              <span style="color: rgb(239, 99, 75);"><b>Drone</b></span></h2>
+            <p><b>Note:</b> Target is trained with ground truth from the target domain. All scores are given in percentage (%). The best and second best scores under each metric are highlighted in colors.</p>
+            <div class="table-container" style="overflow-x: auto; width: 100%; max-width: 1000px; margin-bottom: 20px;">
+              <table class="table is-bordered is-striped is-hoverable" style="width: 100%; table-layout: auto;">
+                <thead>
+              <tr>
+                <th style="vertical-align: middle;">Method</th>
+                <th style="vertical-align: middle;">Acc</th>
+                <th style="vertical-align: middle;">mAcc</th>
+                <th style="vertical-align: middle;">mIoU</th>
+                <th style="vertical-align: middle;">fIoU</th>
+                <th style="vertical-align: middle;">ground</th>
+                <th style="vertical-align: middle;">building</th>
+                <th style="vertical-align: middle;">fence</th>
+                <th style="vertical-align: middle;">person</th>
+                <th style="vertical-align: middle;">pole</th>
+                <th style="vertical-align: middle;">road</th>
+                <th style="vertical-align: middle;">sidewalk</th>
+                <th style="vertical-align: middle;">vegetation</th>
+                <th style="vertical-align: middle;">car</th>
+                <th style="vertical-align: middle;">wall</th>
+                <th style="vertical-align: middle;">traffic-sign</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="color: gray;">Source-Only</td>
+                <td style="color: gray;">43.69</td>
+                <td style="color: gray;">33.81</td>
+                <td style="color: gray;">15.04</td>
+                <td style="color: gray;">11.81</td>
+                <td style="color: gray;">48.71</td>
+                <td style="color: gray;">11.57</td>
+                <td style="color: gray;">0.92</td>
+                <td style="color: gray;">8.42</td>
+                <td style="color: gray;">13.33</td>
+                <td style="color: gray;">25.48</td>
+                <td style="color: gray;">8.18</td>
+                <td style="color: gray;">31.51</td>
+                <td style="color: gray;">14.88</td>
+                <td style="color: gray;">0.04</td>
+                <td style="color: gray;">2.41</td>
+              </tr>
+              <tr><td></td></tr>
+              <tr>
+                <td><a>AdaptSegNet</a></td>
+                <td>49.14</td>
+                <td>35.38</td>
+                <td>21.16</td>
+                <td>12.15</td>
+                <td>29.37</td>
+                <td>23.57</td>
+                <td>0.17</td>
+                <td>0.48</td>
+                <td>13.45</td>
+                <td>38.23</td>
+                <td>17.85</td>
+                <td>48.73</td>
+                <td>29.42</td>
+                <td>35.55</td>
+                <td>0.40</td>
+              </tr>
+              <tr>
+                <td><a>CBST</a></td>
+                <td>57.95</td>
+                <td>41.18</td>
+                <td>24.31</td>
+                <td>16.02</td>
+                <td>33.05</td>
+                <td>24.43</td>
+                <td>0.00</td>
+                <td>3.08</td>
+                <td>18.24</td>
+                <td>56.32</td>
+                <td>16.84</td>
+                <td>56.15</td>
+                <td>23.61</td>
+                <td>35.65</td>
+                <td>0.00</td>
+              </tr>
+              <tr>
+                <td><a>IntraDA</a></td>
+                <td>57.37</td>
+                <td>38.85</td>
+                <td>23.58</td>
+                <td>15.91</td>
+                <td>32.31</td>
+                <td>23.17</td>
+                <td>0.00</td>
+                <td>4.90</td>
+                <td>14.91</td>
+                <td>56.70</td>
+                <td>18.67</td>
+                <td>54.94</td>
+                <td>20.71</td>
+                <td>33.08</td>
+                <td>0.00</td>
+              </tr>
+              <tr>
+                <td><a>DACS</a></td>
+                <td>59.81</td>
+                <td>42.01</td>
+                <td>27.07</td>
+                <td>16.14</td>
+                <td>35.16</td>
+                <td>26.12</td>
+                <td style="background-color: #fae0e3;">0.18</td>
+                <td>4.11</td>
+                <td>18.49</td>
+                <td>55.64</td>
+                <td style="background-color: #fae0e3;">21.74</td>
+                <td>56.81</td>
+                <td style="background-color: #fae0e3;">34.69</td>
+                <td style="background-color: #e5f0e6;">44.73</td>
+                <td>0.05</td>
+              </tr>
+              <tr>
+                <td><a>MIC</a></td>
+                <td>63.11</td>
+                <td>45.60</td>
+                <td>28.87</td>
+                <td>17.46</td>
+                <td>41.40</td>
+                <td>25.19</td>
+                <td>0.01</td>
+                <td style="background-color: #fae0e3;">10.11</td>
+                <td>22.86</td>
+                <td>59.25</td>
+                <td>20.84</td>
+                <td>58.86</td>
+                <td>33.95</td>
+                <td>44.18</td>
+                <td>0.90</td>
+              </tr>
+              <tr>
+                <td><a>PLSR</a></td>
+                <td style="background-color: #fae0e3;">64.61</td>
+                <td style="background-color: #fae0e3;">45.93</td>
+                <td style="background-color: #fae0e3;">29.69</td>
+                <td style="background-color: #fae0e3;">17.99</td>
+                <td style="background-color: #fae0e3;">42.09</td>
+                <td style="background-color: #fae0e3;">30.06</td>
+                <td>0.00</td>
+                <td>9.75</td>
+                <td style="background-color: #fae0e3;">23.32</td>
+                <td style="background-color: #fae0e3;">62.48</td>
+                <td style="background-color: #fae0e3;">20.65</td>
+                <td style="background-color: #fae0e3;">60.15</td>
+                <td>31.69</td>
+                <td>44.27</td>
+                <td style="background-color: #fae0e3;">2.06</td>
+              </tr>
+              <tr>
+                <td><span style="color: rgb(0, 180, 139);"><b>Event</b></span><span style="color: rgb(239, 99, 75);"><b>Fly</b></span></td>
+                <td style="background-color: #e5f0e6;">69.17</td>
+                <td style="background-color: #e5f0e6;">48.20</td>
+                <td style="background-color: #e5f0e6;">32.67</td>
+                <td style="background-color: #e5f0e6;">20.01</td>
+                <td style="background-color: #e5f0e6;">46.64</td>
+                <td style="background-color: #e5f0e6;">30.55</td>
+                <td style="background-color: #e5f0e6;">1.27</td>
+                <td style="background-color: #e5f0e6;">10.91</td>
+                <td style="background-color: #e5f0e6;">25.50</td>
+                <td style="background-color: #e5f0e6;">67.17</td>
+                <td style="background-color: #e5f0e6;">24.21</td>
+                <td style="background-color: #e5f0e6;">61.01</td>
+                <td style="background-color: #e5f0e6;">41.30</td>
+                <td style="background-color: #fae0e3;">44.54</td>
+                <td style="background-color: #e5f0e6;">6.21</td>
+              </tr>
+              <tr><td></td></tr>
+              <tr>
+                <td style="color: gray;">Target</td>
+                <td style="color: gray;">79.57</td>
+                <td style="color: gray;">52.25</td>
+                <td style="color: gray;">42.90</td>
+                <td style="color: gray;">23.30</td>
+                <td style="color: gray;">74.48</td>
+                <td style="color: gray;">39.40</td>
+                <td style="color: gray;">7.10</td>
+                <td style="color: gray;">0.33</td>
+                <td style="color: gray;">31.67</td>
+                <td style="color: gray;">71.96</td>
+                <td style="color: gray;">31.64</td>
+                <td style="color: gray;">67.87</td>
+                <td style="color: gray;">57.51</td>
+                <td style="color: gray;">66.14</td>
+                <td style="color: gray;">23.79</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div><hr>
+  </div>
+  </section>
+
+
+
+  </br>
+  
+
+
+  <section class="section" style="margin-top: -40px;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width has-text-centered">
+          <h2 class="title is-3">
+            Platform Adaptation from 
+            <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span> to 
+            <span style="color: rgb(99, 113, 250);"><b>Quadruped</b></span>
+          </h2>
+          <p><b>Note:</b> Target is trained with ground truth from the target domain. All scores are given in percentage (%). The best and second best scores under each metric are highlighted in colors.</p>
+          <div class="table-container" style="overflow-x: auto; width: 100%; max-width: 1000px; margin-bottom: 20px;">
+            <table class="table is-bordered is-striped is-hoverable" style="width: 100%; table-layout: auto;">
+              <thead>
+                <tr>
+                  <th style="vertical-align: middle;">Method</th>
+                  <th style="vertical-align: middle;">Acc</th>
+                  <th style="vertical-align: middle;">mAcc</th>
+                  <th style="vertical-align: middle;">mIoU</th>
+                  <th style="vertical-align: middle;">fIoU</th>
+                  <th style="vertical-align: middle;">ground</th>
+                  <th style="vertical-align: middle;">building</th>
+                  <th style="vertical-align: middle;">fence</th>
+                  <th style="vertical-align: middle;">person</th>
+                  <th style="vertical-align: middle;">pole</th>
+                  <th style="vertical-align: middle;">road</th>
+                  <th style="vertical-align: middle;">sidewalk</th>
+                  <th style="vertical-align: middle;">vegetation</th>
+                  <th style="vertical-align: middle;">car</th>
+                  <th style="vertical-align: middle;">wall</th>
+                  <th style="vertical-align: middle;">traffic-sign</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="color: gray;">Source-Only</td>
+                  <td style="color: gray;">66.59</td>
+                  <td style="color: gray;">39.73</td>
+                  <td style="color: gray;">25.15</td>
+                  <td style="color: gray;">16.52</td>
+                  <td style="color: gray;">63.01</td>
+                  <td style="color: gray;">39.26</td>
+                  <td style="color: gray;">3.88</td>
+                  <td style="color: gray;">17.88</td>
+                  <td style="color: gray;">10.12</td>
+                  <td style="color: gray;">51.67</td>
+                  <td style="color: gray;">9.27</td>
+                  <td style="color: gray;">68.02</td>
+                  <td style="color: gray;">12.35</td>
+                  <td style="color: gray;">0.24</td>
+                  <td style="color: gray;">0.99</td>
+                </tr>
+                <tr>
+                  <td><a>AdaptSegNet</a></td>
+                  <td>67.25</td>
+                  <td>48.73</td>
+                  <td>32.79</td>
+                  <td>14.89</td>
+                  <td>45.00</td>
+                  <td>45.88</td>
+                  <td>30.00</td>
+                  <td>34.92</td>
+                  <td>12.22</td>
+                  <td>55.50</td>
+                  <td>15.85</td>
+                  <td>73.84</td>
+                  <td>16.07</td>
+                  <td>31.35</td>
+                  <td>0.00</td>
+                </tr>
+                <tr>
+                  <td><a>CBST</a></td>
+                  <td>69.25</td>
+                  <td>49.58</td>
+                  <td>35.06</td>
+                  <td>14.95</td>
+                  <td>47.39</td>
+                  <td>54.68</td>
+                  <td>34.27</td>
+                  <td>36.83</td>
+                  <td style="background-color: #fae0e3;">13.78</td>
+                  <td>56.15</td>
+                  <td>18.13</td>
+                  <td>74.23</td>
+                  <td>16.18</td>
+                  <td>34.06</td>
+                  <td>0.00</td>
+                </tr>
+                <tr>
+                  <td><a>IntraDA</a></td>
+                  <td>68.29</td>
+                  <td>48.91</td>
+                  <td>34.25</td>
+                  <td>14.82</td>
+                  <td>43.75</td>
+                  <td>55.36</td>
+                  <td>32.64</td>
+                  <td>33.39</td>
+                  <td>11.60</td>
+                  <td>55.31</td>
+                  <td>17.00</td>
+                  <td>76.00</td>
+                  <td>20.30</td>
+                  <td>31.40</td>
+                  <td>0.00</td>
+                </tr>
+                <tr>
+                  <td><a>DACS</a></td>
+                  <td>69.55</td>
+                  <td style="background-color: #fae0e3;">53.88</td>
+                  <td>36.51</td>
+                  <td>14.66</td>
+                  <td>43.72</td>
+                  <td style="background-color: #fae0e3;">57.27</td>
+                  <td style="background-color: #fae0e3;">38.43</td>
+                  <td>35.42</td>
+                  <td style="background-color: #e5f0e6;">14.02</td>
+                  <td>57.10</td>
+                  <td>18.43</td>
+                  <td style="background-color: #fae0e3;">76.16</td>
+                  <td>24.79</td>
+                  <td>36.21</td>
+                  <td>0.00</td>
+                </tr>
+                <tr>
+                  <td><a>MIC</a></td>
+                  <td>70.78</td>
+                  <td>49.22</td>
+                  <td>36.93</td>
+                  <td style="background-color: #fae0e3;">15.60</td>
+                  <td style="background-color: #e5f0e6;">51.71</td>
+                  <td>51.73</td>
+                  <td>33.54</td>
+                  <td>38.10</td>
+                  <td>9.44</td>
+                  <td>54.27</td>
+                  <td>20.74</td>
+                  <td>74.40</td>
+                  <td style="background-color: #e5f0e6;">29.79</td>
+                  <td style="background-color: #fae0e3;">41.78</td>
+                  <td style="background-color: #fae0e3;">0.70</td>
+                </tr>
+                <tr>
+                  <td><a>PLSR</a></td>
+                  <td style="background-color: #fae0e3;">70.91</td>
+                  <td>53.65</td>
+                  <td style="background-color: #fae0e3;">37.57</td>
+                  <td>15.25</td>
+                  <td style="background-color: #fae0e3;">49.04</td>
+                  <td style="background-color: #fae0e3;">53.28</td>
+                  <td>37.54</td>
+                  <td>36.64</td>
+                  <td>12.91</td>
+                  <td style="background-color: #fae0e3;">57.60</td>
+                  <td style="background-color: #e5f0e6;">25.29</td>
+                  <td>75.92</td>
+                  <td>24.92</td>
+                  <td>39.85</td>
+                  <td>0.24</td>
+                </tr>
+                <tr>
+                  <td><span style="color: rgb(0, 180, 139);"><b>Event</b></span><span style="color: rgb(239, 99, 75);"><b>Fly</b></span></td>
+                  <td style="background-color: #e5f0e6;">73.42</td>
+                  <td style="background-color: #e5f0e6;">54.14</td>
+                  <td style="background-color: #e5f0e6;">40.05</td>
+                  <td style="background-color: #e5f0e6;">15.78</td>
+                  <td style="background-color: #fae0e3;">50.07</td>
+                  <td style="background-color: #e5f0e6;">61.33</td>
+                  <td style="background-color: #e5f0e6;">39.17</td>
+                  <td style="background-color: #e5f0e6;">41.97</td>
+                  <td>12.83</td>
+                  <td style="background-color: #e5f0e6;">59.14</td>
+                  <td style="background-color: #fae0e3;">23.51</td>
+                  <td style="background-color: #e5f0e6;">79.80</td>
+                  <td style="background-color: #fae0e3;">27.26</td>
+                  <td style="background-color: #e5f0e6;">42.65</td>
+                  <td style="background-color: #e5f0e6;">2.86</td>
+                </tr>
+                <tr><td></td></tr>
+                <tr>
+                  <td style="color: gray;">Target</td>
+                  <td style="color: gray;">80.02</td>
+                  <td style="color: gray;">60.55</td>
+                  <td style="color: gray;">49.84</td>
+                  <td style="color: gray;">19.58</td>
+                  <td style="color: gray;">74.80</td>
+                  <td style="color: gray;">56.23</td>
+                  <td style="color: gray;">46.08</td>
+                  <td style="color: gray;">55.28</td>
+                  <td style="color: gray;">21.79</td>
+                  <td style="color: gray;">59.90</td>
+                  <td style="color: gray;">30.31</td>
+                  <td style="color: gray;">77.24</td>
+                  <td style="color: gray;">58.38</td>
+                  <td style="color: gray;">62.47</td>
+                  <td style="color: gray;">5.81</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><hr>
+    </div>
+  </section>
+
+
+
+  </br>
+
+
+
+  <section class="section" style="margin-top: -50px;">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <div class="column is-full-width has-text-centered">
+          <h2 class="title is-3"><i class="fa fa-heart"></i></span> Acknowledgments</h2>
+          <div class="content has-text-justified" style="padding-top: 0px">
+            <p>
+              This work is under the programme <a href="http://descartes.cnrsatcreate.cnrs.fr/" target="_blank">DesCartes</a> and is supported by the National Research Foundation, Prime Minister’s Office, Singapore, under its Campus for Research Excellence and Technological Enterprise (CREATE) programme.
+            </p>
+            <p>
+              This work is also supported by the <a href="https://machinelearning.apple.com/updates/apple-scholars-aiml-2025" target="_blank">Apple Scholars in AI/ML Ph.D. Fellowship</a> program.
+            </p>
+          </div>
+          <hr>
+        </div>
       </div>
     </div>
   </section>
@@ -654,7 +1101,6 @@
 
 
   </br>
-  
 
 
   <section class="section" id="BibTeX" style="margin-top: -20px;">
@@ -686,13 +1132,13 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              This website is licensed under a <a rel="license"
+              This website is under a <a rel="license"
                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-                Commons Attribution-ShareAlike 4.0 International License</a>.
+                Commons Attribution-ShareAlike 4.0 International</a> license.
             </p>
             <p>
               We thank the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> authors for their
-              excellent templates, which we used as a basis for our site.
+              template, which we used as a basis for our website.
             </p>
           </div>
         </div>
