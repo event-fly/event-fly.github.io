@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="Event Camera, Semantic Segmentation, Unsupervised Domain Adaptation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EventFly</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+  <style>
+    .a {
+      color: rgb(1, 177, 160);
+    }
+
+    .query-container {
+      padding: 10px;
+    }
+
+    .query-item {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: white;
+      color: black;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      cursor: pointer;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    .query-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    .query-dot {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      border: 2px solid black;
+      border-radius: 50%;
+    }
+
+    .query-item.active .query-dot {
+      background-color: rgb(1, 177, 160);
+      border: 2px solid black;
+    }
+
+    .columns {
+      display: flex;
+      justify-content: flex-start;
+      padding: 5px;
+      text-align: left;
+    }
+
+    .tag {
+      background-color: #f5f5f5;
+      border-radius: 3px;
+      padding: 5px;
+      margin-right: 5px;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+
+
+
+
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item">
+          <span class="icon"><i class="fas fa-home"></i></span>
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">More Research</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://arxiv.org/abs/2405.05259" target="_blank">CVPR 2024 | OpenESS</a>
+            <a class="navbar-item" href="https://flexevent.github.io/" target="_blank">arXiv 2024 | FlexEvent</a>
+            <a class="navbar-item" href="">arXiv 2025 | Talk2Event</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- <img src="" style="width: 200px; margin-bottom: 50px;"> -->
+            <h1 class="title is-1 publication-title">
+              <span style="color: rgb(0, 180, 139);"><b>Event</b></span><span style="color: rgb(239, 99, 75);"><b>Fly</b></span>: Event Camera Perception from Ground to the Sky
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://ldkong.com/" target="_blank"><strong>Lingdong Kong</strong></a><sup>1,2</sup>&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <a href="https://dylanorange.github.io/" target="_blank"><strong>Dongyue Lu</strong></a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <a href="https://xiangxu-0103.github.io/" target="_blank"><strong>Xiang Xu</strong></a><sup>3</sup>&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <a href="https://ipal.cnrs.fr/lai-xing-ng/" target="_blank"><strong>Lai Xing Ng</strong></a><sup>4</sup>&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <a href="https://www.comp.nus.edu.sg/cs/people/ooiwt/" target="_blank"><strong>Wei Tsang Ooi</strong></a><sup>1,5</sup>&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <a href="https://ipal.cnrs.fr/benoit-cottereau-personal-page/" target="_blank"><strong>Benoit R. Cottereau</strong></a><sup>5,6</sup>
+              </span>
+            </div>
+
+            <br/>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <sup>1&nbsp;</sup>NUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <sup>2&nbsp;</sup>CNRS@CREATE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <sup>3&nbsp;</sup>NUAA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <sup>4&nbsp;</sup>I<sup>2</sup>R, A*STAR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <sup>5&nbsp;</sup>IPAL, CNRS IRL 2955, Singapore
+              </span>
+              <span class="author-block">
+                <sup>6&nbsp;</sup>CerCo, CNRS UMR 5549, Université Toulouse III
+              </span>
+            </div>
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2412.04383" target="_blank"
+                      class="external-link button is-dark"
+                      style="background-color: rgb(0, 180, 139);  color: white; border-color: rgb(0, 180, 139);">
+                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                      <span><b>Paper</b></span>
+                  </a>
+                </span>
+                &nbsp;
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2412.04383" target="_blank"
+                      class="external-link button is-dark"
+                      style="background-color: rgb(239, 99, 75); color: white; border-color: rgb(239, 99, 75);">
+                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                      <span><b>arXiv</b></span>
+                  </a>
+                </span>
+                &nbsp;
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2412.04383" target="_blank"
+                      class="external-link button is-dark"
+                      style="background-color: rgb(0, 180, 139); color: white; border-color: rgb(0, 180, 139);">
+                    <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span><b>Video</b></span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <!-- &nbsp;
+                <span class="link-block">
+                  <a href="https://github.com/iris0329/SeeGround" target="_blank"
+                      class="external-link button is-dark"
+                      style="background-color: #01B1A0; color: white; border-color: #01B1A0;">
+                      <span class="icon"><i class="fab fa-github"></i></span>
+                      <span><b>Code</b></span>
+                  </a>
+                </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section" style="margin-top: -100px;"></section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class=" column is-full-width has-text-centered">
+      <img src="./static/images/teaser.png" />
+      <div class="content has-text-justified" style="padding-top: 10px">
+        <p>
+          Key discrepancies across the <img src="./static/images/vehicle.png" style="height: 18px; vertical-align: middle"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span> (P<sup><span style="color: rgb(0, 180, 139);"><b>v</b></span></sup>), 
+          <img src="./static/images/drone.png" style="height: 18px; vertical-align: middle"> <span style="color: rgb(239, 99, 75);"><b>Drone</b></span> (P<sup><span style="color: rgb(239, 99, 75);"><b>d</b></span></sup>), and 
+          <img src="./static/images/quadruped.png" style="height: 18px; vertical-align: middle"> <span style="color: rgb(99, 113, 250);"><b>Quadruped</b></span> (P<sup><span style="color: rgb(99, 113, 250);"><b>q</b></span></sup>) platforms. 
+          We compare the core <b>attributes</b> (viewpoint, speed, stability), <b>event data distributions</b>, and <b>semantic distributions</b> across event data acquired by three platforms, highlighting the challenges of adapting event camera perception to diverse operational contexts. 
+          These variations motivate the need for a robust <b>cross-platform adaptation</b> framework to harmonize event-based dense perception across distinct environmental setups and conditions.
+        </p>
+      </div>
+      <hr>
+    </div>
+  </div>
+  </div>
+  </section>
+
+
+
+
+  <section class="section" style="margin-top: -10px;">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <div class="column is-full-width has-text-centered">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified" style="padding-top: 0px">
+            <p>
+              Cross-platform adaptation in event-based perception is crucial for deploying event cameras across diverse settings, such as Vehicles, Drones, and Quadrupeds, each with unique motion dynamics, viewpoints, and class distributions. 
+              In this work, we introduce <span style="color: rgb(0, 180, 139);"><b>Event</b></span><span style="color: rgb(239, 99, 75);"><b>Fly</b></span>, a framework for robust cross-platform adaptation in event camera perception. 
+            </p>
+            <p>
+              Our approach comprises <b>three</b> key components: 
+              <b>(i)</b> Event Activation Prior (EAP), which identifies high-activation regions in the target domain to minimize prediction entropy, fostering confident, domain-adaptive predictions; 
+              <b>(ii)</b> EventBlend, a data-mixing strategy that integrates source and target event voxel grids based on EAP-driven similarity and density maps, enhancing feature alignment; 
+              and <b>(iii)</b> EventMatch, a dual-discriminator technique that aligns features from source, target, and blended domains for better domain-invariant learning. 
+            </p>
+            <p>
+              To holistically assess cross-platform adaptation abilities, we introduce <span style="color: rgb(0, 180, 139);"><b>E</b></span><span style="color: rgb(239, 99, 75);"><b>X</b></span><span style="color: rgb(99, 113, 250);"><b>Po</b></span>, a large-scale benchmark with diverse samples across vehicle, drone, and quadruped platforms. 
+              Extensive experiments validate our effectiveness, demonstrating substantial gains over popular adaptation methods. We hope this work can pave the way for adaptive, high-performing event perception across diverse and complex environments.
+            </p>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+  <section class="section" style="margin-top: -100px;"></section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class=" column is-full-width has-text-centered">
+        <h2 class="title is-3">
+          <span class="icon"><i class="fa fa-rocket"></i></span>&thinsp; The <span style="color: rgb(0, 180, 139);"><b>Event</b></span><span style="color: rgb(239, 99, 75);"><b>Fly</b></span> Framework
+        </h2>
+      <img src="./static/images/framework.png" />
+      <div class="content has-text-justified" style="padding-top: 0px">
+        <p>
+          <b>Overview of the <span style="color: rgb(0, 180, 139);"><b>Event</b></span><span style="color: rgb(239, 99, 75);"><b>Fly</b></span> framework.</b> 
+          Guided by the EAP principle, the pair of source and target event data <b>V</b><sup><span style="color: rgb(0, 180, 139);"><b>v</b></span></sup> and <b>V</b><sup><span style="color: rgb(239, 99, 75);"><b>d</b></span></sup> are mixed via the EventBlend operation, 
+          where the blending mask <b>M</b> is obtained by measuring the similarities between density maps <b>D</b><sup><span style="color: rgb(0, 180, 139);"><b>v</b></span></sup> and <b>D&#x0303;</b><sup><span style="color: rgb(239, 99, 75);"><b>d</b></span></sup>. 
+          The features  <b>F</b><sup><span style="color: rgb(0, 180, 139);"><b>v</b></span></sup>, <b>F</b><sup><span style="color: rgb(239, 99, 75);"><b>d</b></span></sup>, and <b>F&#x0303;</b> from the source, target, and blended domains are then used for EventMatch. 
+          This facilitates learning an intermediary representation that is both robust (source-aligned) and adaptable (target-sensitive).
+        </p>
+      </div>
+      <hr>
+    </div>
+  </div>
+  </div>
+  </section>
+
+
+
+  <br/>
+
+
+
+  <section class="section" style="margin-top: -50px;"></section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class=" column is-full-width has-text-centered">
+        <h2 class="title is-3">
+          <b>Demo #1:&nbsp;</b> From <img src="./static/images/vehicle.png" style="height: 28px; vertical-align: middle"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span> to <img src="./static/images/drone.png" style="height: 28px; vertical-align: middle"> <span style="color: rgb(239, 99, 75);"><b>Drone</b></span>
+        </h2>
+        <div style="flex: 1; margin-right: 10px; text-align: center;">
+          <video poster="" autoplay="" controls="" muted="" loop=""
+            style="border-radius: 10px; border: 1px solid #ccc; width: 90%;">
+            <source src="./static/videos/demo1.mp4" type="video/mp4">
+          </video>
+        </div>
+      <div class="content has-text-justified" style="padding-top: 0px">
+      </div>
+      <hr>
+    </div>
+  </div>
+  </div>
+  </section>
+
+
+
+  <br/>
+
+
+
+  <section class="section" style="margin-top: -50px;"></section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class=" column is-full-width has-text-centered">
+        <h2 class="title is-3">
+          <b>Demo #2:&nbsp;</b> From <img src="./static/images/vehicle.png" style="height: 28px; vertical-align: middle"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span> to <img src="./static/images/quadruped.png" style="height: 29px; vertical-align: middle"> <span style="color: rgb(99, 113, 250);"><b>Quadruped</b>
+        </h2>
+        <div style="flex: 1; margin-right: 10px; text-align: center;">
+          <video poster="" autoplay="" controls="" muted="" loop=""
+            style="border-radius: 10px; border: 1px solid #ccc; width: 90%;">
+            <source src="./static/videos/demo2.mp4" type="video/mp4">
+          </video>
+        </div>
+      <div class="content has-text-justified" style="padding-top: 0px">
+      </div>
+      <hr>
+    </div>
+  </div>
+  </div>
+  </section>
+
+
+
+  <br/>
+
+
+
+  <section class="section" style="margin-top: -50px;"></section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class=" column is-full-width has-text-centered">
+        <h2 class="title is-3">
+          <b>Demo #3:&nbsp;</b> From <img src="./static/images/drone.png" style="height: 28px; vertical-align: middle"> <span style="color: rgb(239, 99, 75);"><b>Drone</b></span> to <img src="./static/images/vehicle.png" style="height: 28px; vertical-align: middle"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span>
+        </h2>
+        <div style="flex: 1; margin-right: 10px; text-align: center;">
+          <video poster="" autoplay="" controls="" muted="" loop=""
+            style="border-radius: 10px; border: 1px solid #ccc; width: 90%;">
+            <source src="./static/videos/demo3.mp4" type="video/mp4">
+          </video>
+        </div>
+      <div class="content has-text-justified" style="padding-top: 0px">
+      </div>
+      <hr>
+    </div>
+  </div>
+  </div>
+  </section>
+
+
+
+
+
+  <br/>
+  
+
+
+  <section class="section" id="BibTeX" style="margin-top: -20px;">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre style="border-radius: 10px;"><code>@inproceedings{kong2025eventfly,
+  title   = {EventFly: Event Camera Perception from Ground to the Sky},
+  author  = {Lingdong Kong and Dongyue Lu and Xiang Xu and Lai Xing Ng and Wei Tsang Ooi and Benoit R. Cottereau},
+  journal = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year    = {2025},
+}</code></pre>
+  <hr>
+    </div>
+  </section>
+
+
+
+
+
+  <br/>
+
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              We thank the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> authors for their
+              excellent templates, which we used as a basis for our site.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
