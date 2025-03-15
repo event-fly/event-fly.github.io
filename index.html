@@ -75,6 +75,14 @@
         padding: 10px 14px;
       }
     }
+
+    .img-hover-effect {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .img-hover-effect:hover {
+      transform: scale(1.08); /* Zoom to 108% */
+    }
     </style>
 
 </head>
@@ -236,12 +244,12 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class=" column is-full-width has-text-centered">
-      <img src="./static/images/teaser.png" />
+      <img src="./static/images/teaser.png"/>
       <div class="content has-text-justified" style="padding-top: 10px">
         <p>
-          Key discrepancies across the <img src="./static/images/vehicle.png" style="height: 18px; vertical-align: middle"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span> (P<sup><span style="color: rgb(0, 180, 139);"><b>v</b></span></sup>), 
-          <img src="./static/images/drone.png" style="height: 18px; vertical-align: middle"> <span style="color: rgb(239, 99, 75);"><b>Drone</b></span> (P<sup><span style="color: rgb(239, 99, 75);"><b>d</b></span></sup>), and 
-          <img src="./static/images/quadruped.png" style="height: 18px; vertical-align: middle"> <span style="color: rgb(99, 113, 250);"><b>Quadruped</b></span> (P<sup><span style="color: rgb(99, 113, 250);"><b>q</b></span></sup>) platforms. 
+          Key discrepancies across the <img src="./static/images/vehicle.png" style="height: 18px; vertical-align: middle" class="img-hover-effect"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span> (P<sup><span style="color: rgb(0, 180, 139);"><b>v</b></span></sup>), 
+          <img src="./static/images/drone.png" style="height: 18px; vertical-align: middle" class="img-hover-effect"> <span style="color: rgb(239, 99, 75);"><b>Drone</b></span> (P<sup><span style="color: rgb(239, 99, 75);"><b>d</b></span></sup>), and 
+          <img src="./static/images/quadruped.png" style="height: 18px; vertical-align: middle" class="img-hover-effect"> <span style="color: rgb(99, 113, 250);"><b>Quadruped</b></span> (P<sup><span style="color: rgb(99, 113, 250);"><b>q</b></span></sup>) platforms. 
           We compare the core <b>attributes</b> (viewpoint, speed, stability), <b>event data distributions</b>, and <b>semantic distributions</b> across event data acquired by three platforms, highlighting the challenges of adapting event camera perception to diverse operational contexts. 
           These variations motivate the need for a robust <b>cross-platform adaptation</b> framework to harmonize event-based dense perception across distinct environmental setups and conditions.
         </p>
@@ -293,7 +301,7 @@
         <h2 class="title is-3">
           <span class="icon"><i class="fa fa-rocket"></i></span>&thinsp; The <span style="color: rgb(0, 180, 139);"><b>Event</b></span><span style="color: rgb(239, 99, 75);"><b>Fly</b></span> Framework
         </h2>
-      <img src="./static/images/framework.png" />
+      <img src="./static/images/framework.png"/>
       <div class="content has-text-justified" style="padding-top: 0px">
         <p>
           <b>Overview of the <span style="color: rgb(0, 180, 139);"><b>Event</b></span><span style="color: rgb(239, 99, 75);"><b>Fly</b></span> framework.</b> 
@@ -320,7 +328,7 @@
     <div class="columns is-centered">
       <div class=" column is-full-width has-text-centered">
         <h2 class="title is-3">
-          <b>Demo #1:&nbsp;</b> From <img src="./static/images/vehicle.png" style="height: 28px; vertical-align: middle"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span> to <img src="./static/images/drone.png" style="height: 28px; vertical-align: middle"> <span style="color: rgb(239, 99, 75);"><b>Drone</b></span>
+          <b>Demo #1:&nbsp;</b> From <img src="./static/images/vehicle.png" style="height: 28px; vertical-align: middle" class="img-hover-effect"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span> to <img src="./static/images/drone.png" style="height: 28px; vertical-align: middle" class="img-hover-effect"> <span style="color: rgb(239, 99, 75);"><b>Drone</b></span>
         </h2>
         <div style="flex: 1; margin-right: 10px; text-align: center;">
           <video poster="" autoplay="" controls="" muted="" loop=""
@@ -347,7 +355,7 @@
     <div class="columns is-centered">
       <div class=" column is-full-width has-text-centered">
         <h2 class="title is-3">
-          <b>Demo #2:&nbsp;</b> From <img src="./static/images/vehicle.png" style="height: 28px; vertical-align: middle"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span> to <img src="./static/images/quadruped.png" style="height: 29px; vertical-align: middle"> <span style="color: rgb(99, 113, 250);"><b>Quadruped</b>
+          <b>Demo #2:&nbsp;</b> From <img src="./static/images/vehicle.png" style="height: 28px; vertical-align: middle" class="img-hover-effect"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span> to <img src="./static/images/quadruped.png" style="height: 29px; vertical-align: middle" class="img-hover-effect"> <span style="color: rgb(99, 113, 250);"><b>Quadruped</b>
         </h2>
         <div style="flex: 1; margin-right: 10px; text-align: center;">
           <video poster="" autoplay="" controls="" muted="" loop=""
@@ -374,7 +382,7 @@
     <div class="columns is-centered">
       <div class=" column is-full-width has-text-centered">
         <h2 class="title is-3">
-          <b>Demo #3:&nbsp;</b> From <img src="./static/images/drone.png" style="height: 28px; vertical-align: middle"> <span style="color: rgb(239, 99, 75);"><b>Drone</b></span> to <img src="./static/images/vehicle.png" style="height: 28px; vertical-align: middle"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span>
+          <b>Demo #3:&nbsp;</b> From <img src="./static/images/drone.png" style="height: 28px; vertical-align: middle" class="img-hover-effect"> <span style="color: rgb(239, 99, 75);"><b>Drone</b></span> to <img src="./static/images/vehicle.png" style="height: 28px; vertical-align: middle" class="img-hover-effect"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span>
         </h2>
         <div style="flex: 1; margin-right: 10px; text-align: center;">
           <video poster="" autoplay="" controls="" muted="" loop=""
@@ -536,87 +544,87 @@
           <div class="columns is-multiline">
             <!-- Row 1 -->
             <div class="column is-3">
-              <img src="./static/images/pie_charts/road.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/road.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Road</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/sidewalk.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/sidewalk.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Sidewalk</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/building.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/building.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Building</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/wall.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/wall.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Wall</b></p>
             </div>
   
             <!-- Row 2 -->
             <div class="column is-3">
-              <img src="./static/images/pie_charts/fence.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/fence.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Fence</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/pole.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/pole.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Pole</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/traffic-light.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/traffic-light.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Traffic Light</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/traffic-sign.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/traffic-sign.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Traffic Sign</b></p>
             </div>
   
             <!-- Row 3 -->
             <div class="column is-3">
-              <img src="./static/images/pie_charts/vegetation.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/vegetation.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Vegetation</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/terrain.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/terrain.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Terrain</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/sky.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/sky.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Sky</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/person.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/person.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Person</b></p>
             </div>
   
             <!-- Row 4 -->
             <div class="column is-3">
-              <img src="./static/images/pie_charts/rider.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/rider.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Rider</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/car.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/car.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Car</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/truck.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/truck.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Truck</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/bus.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/bus.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Bus</b></p>
             </div>
   
             <!-- Row 5 -->
             <div class="column is-3">
-              <img src="./static/images/pie_charts/train.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/train.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Train</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/motorcycle.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/motorcycle.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Motorcycle</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/bicycle.png" style="width: 100%; border-radius: 10px;" loading="lazy">
+              <img src="./static/images/pie_charts/bicycle.png" style="width: 100%; border-radius: 10px;" class="img-hover-effect" loading="lazy">
               <p class="has-text-centered"><b>Bicycle</b></p>
             </div>
           </div><hr>
@@ -644,9 +652,9 @@
                 <th style="vertical-align: middle;">ID</th>
                 <th style="vertical-align: middle;">Class</th>
                 <th style="vertical-align: middle;">Type</th>
-                <th style="vertical-align: middle;"><img src="./static/images/vehicle.png" style="height: 24px;" loading="lazy"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span></th>
-                <th style="vertical-align: middle;"><img src="./static/images/drone.png" style="height: 24px;" loading="lazy"> <span style="color: rgb(239, 99, 75);"><b>Drone</b></span></th>
-                <th style="vertical-align: middle;"><img src="./static/images/quadruped.png" style="height: 24px;" loading="lazy"> <span style="color: rgb(99, 113, 250);"><b>Quadruped</b></span></th>
+                <th style="vertical-align: middle;"><img src="./static/images/vehicle.png" style="height: 24px;" class="img-hover-effect" loading="lazy"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span></th>
+                <th style="vertical-align: middle;"><img src="./static/images/drone.png" style="height: 24px;" class="img-hover-effect" loading="lazy"> <span style="color: rgb(239, 99, 75);"><b>Drone</b></span></th>
+                <th style="vertical-align: middle;"><img src="./static/images/quadruped.png" style="height: 24px;" class="img-hover-effect" loading="lazy"> <span style="color: rgb(99, 113, 250);"><b>Quadruped</b></span></th>
               </tr>
             </thead>
             <tbody>
@@ -654,153 +662,153 @@
                 <td style="vertical-align: middle;">0</td>
                 <td style="vertical-align: middle;"><code>road</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_road_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_road_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_road_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_road_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_road_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_road_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">1</td>
                 <td style="vertical-align: middle;"><code>sidewalk</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_sidewalk_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_sidewalk_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_sidewalk_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_sidewalk_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_sidewalk_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_sidewalk_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">2</td>
                 <td style="vertical-align: middle;"><code>building</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_building_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_building_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_building_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_building_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_building_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_building_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">3</td>
                 <td style="vertical-align: middle;"><code>wall</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_wall_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_wall_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_wall_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_wall_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_wall_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_wall_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">4</td>
                 <td style="vertical-align: middle;"><code>fence</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_fence_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_fence_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_fence_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_fence_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_fence_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_fence_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">5</td>
                 <td style="vertical-align: middle;"><code>pole</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_pole_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_pole_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_pole_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_pole_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_pole_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_pole_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">6</td>
                 <td style="vertical-align: middle;"><code>traffic-light</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_traffic-light_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_traffic-light_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_traffic-light_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_traffic-light_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_traffic-light_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_traffic-light_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">7</td>
                 <td style="vertical-align: middle;"><code>traffic-sign</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_traffic-sign_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_traffic-sign_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_traffic-sign_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_traffic-sign_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_traffic-sign_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_traffic-sign_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">8</td>
                 <td style="vertical-align: middle;"><code>vegetation</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_vegetation_parula.png" style="height: 100px; object-fit: contain;"loading="lazy" ></td>
-                <td><img src="./static/images/prior_drone/class_vegetation_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_vegetation_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_vegetation_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy" ></td>
+                <td><img src="./static/images/prior_drone/class_vegetation_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_vegetation_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">9</td>
                 <td style="vertical-align: middle;"><code>terrain</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_terrain_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_terrain_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_terrain_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_terrain_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_terrain_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_terrain_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">10</td>
                 <td style="vertical-align: middle;"><code>sky</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_sky_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_sky_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_sky_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_sky_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_sky_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_sky_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">11</td>
                 <td style="vertical-align: middle;"><code>person</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_person_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_person_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_person_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_person_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_person_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_person_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">12</td>
                 <td style="vertical-align: middle;"><code>rider</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_rider_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_rider_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_rider_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_rider_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_rider_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_rider_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">13</td>
                 <td style="vertical-align: middle;"><code>car</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_car_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_car_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_car_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_car_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_car_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_car_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">14</td>
                 <td style="vertical-align: middle;"><code>truck</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_truck_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_truck_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_truck_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_truck_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_truck_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_truck_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">15</td>
                 <td style="vertical-align: middle;"><code>bus</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_bus_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_bus_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_bus_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_bus_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_bus_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_bus_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">16</td>
                 <td style="vertical-align: middle;"><code>train</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_train_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_train_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_train_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_train_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_train_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_train_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">17</td>
                 <td style="vertical-align: middle;"><code>motorcycle</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_motorcycle_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_motorcycle_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_motorcycle_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_motorcycle_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_motorcycle_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_motorcycle_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">18</td>
                 <td style="vertical-align: middle;"><code>bicycle</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_bicycle_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_drone/class_bicycle_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
-                <td><img src="./static/images/prior_quadruped/class_bicycle_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_vehicle/class_bicycle_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_bicycle_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_bicycle_parula.png" style="height: 100px; object-fit: contain;" class="img-hover-effect" loading="lazy"></td>
               </tr>
             </tbody>
           </table>
