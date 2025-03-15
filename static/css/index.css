@@ -160,3 +160,62 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.publication-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.publication-links .link-block {
+  margin-bottom: 10px;
+}
+
+
+
+
+/* Define base button styles for the links */
+.paper-btn {
+  background-color: rgb(0, 180, 139);
+  color: white;
+  border-color: rgb(0, 180, 139);
+}
+
+.arxiv-btn {
+  background-color: rgb(239, 99, 75);
+  color: white;
+  border-color: rgb(239, 99, 75);
+}
+
+.video-btn {
+  background-color: rgb(0, 180, 139);
+  color: white;
+  border-color: rgb(0, 180, 139);
+}
+
+/* Hover effects */
+.paper-btn:hover {
+  background-color: rgb(0, 150, 120);
+  border-color: rgb(0, 150, 120);
+}
+
+.arxiv-btn:hover {
+  background-color: rgb(220, 70, 50);
+  border-color: rgb(220, 70, 50);
+}
+
+.video-btn:hover {
+  background-color: rgb(0, 150, 120);
+  border-color: rgb(0, 150, 120);
+}
