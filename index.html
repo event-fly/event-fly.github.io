@@ -10,51 +10,18 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"> -->
   <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
   <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+  <link rel="icon" href="./static/images/quadruped.png" type="image/x-icon">
+
 
   <style>
     .a {
-      color: rgb(1, 177, 160);
-    }
-
-    .query-container {
-      padding: 10px;
-    }
-
-    .query-item {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 10px;
-      padding: 10px;
-      background-color: white;
-      color: black;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      cursor: pointer;
-      text-align: left;
-      font-size: 16px;
-    }
-
-    .query-item:hover {
-      background-color: #f0f0f0;
-    }
-
-    .query-dot {
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      margin-right: 10px;
-      border: 2px solid black;
-      border-radius: 50%;
-    }
-
-    .query-item.active .query-dot {
-      background-color: rgb(1, 177, 160);
-      border: 2px solid black;
+      color: rgb(0, 180, 139);
     }
 
     .columns {
@@ -76,12 +43,71 @@
 
   <link rel="icon" href="./static/images/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="./static/images/apple-touch-icon.png">
+
+
+
+  <style>
+    /* Back to Top Button */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 50px;
+      z-index: 999;
+      background-color: rgb(0, 180, 139);
+      color: white;
+      border: none;
+      border-radius: 50%; /* Circular button */
+      padding: 12px 16px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      transition: opacity 0.3s;
+      display: none; /* Hidden by default */
+    }
+    
+    #backToTopBtn:hover {
+      background-color: rgb(239, 99, 75);
+    }
+    
+    @media (max-width: 768px) {
+      #backToTopBtn {
+        font-size: 18px;
+        padding: 10px 14px;
+      }
+    }
+    </style>
+
 </head>
 
 
 
 
 <body>
+
+  <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+
+  <script>
+    // Show the button when scrolled down 20px
+    window.onscroll = function() {
+      scrollFunction();
+    };
+  
+    function scrollFunction() {
+      const button = document.getElementById("backToTopBtn");
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        button.style.display = "block";
+      } else {
+        button.style.display = "none";
+      }
+    }
+  
+    // Smooth scroll to top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+
 
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -100,9 +126,9 @@
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">More Research</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://arxiv.org/abs/2405.05259" target="_blank">CVPR 2024 | OpenESS</a>
-            <a class="navbar-item" href="https://flexevent.github.io/" target="_blank">arXiv 2024 | FlexEvent</a>
-            <a class="navbar-item" href="">arXiv 2025 | Talk2Event</a>
+            <a class="navbar-item" href="https://arxiv.org/abs/2405.05259" target="_blank">OpenESS</a>
+            <a class="navbar-item" href="https://flexevent.github.io/" target="_blank">FlexEvent</a>
+            <a class="navbar-item" href="https://talk2event.github.io/" target="_blank">Talk2Event</a>
           </div>
         </div>
       </div>
@@ -229,7 +255,7 @@
 
 
 
-  <section class="section" style="margin-top: -10px;">
+  <section class="section" style="margin-top: 0px;">
     <div class="container is-max-desktop">
 
       <div class="columns is-centered">
@@ -260,7 +286,7 @@
 
   
 
-  <section class="section" style="margin-top: -90px;"></section>
+  <section class="section" style="margin-top: -50px;"></section>
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class=" column is-full-width has-text-centered">
@@ -289,7 +315,7 @@
 
 
 
-  <section class="section" style="margin-top: -50px;"></section>
+  <section class="section" style="margin-top: -20px;"></section>
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class=" column is-full-width has-text-centered">
@@ -316,7 +342,7 @@
 
 
 
-  <section class="section" style="margin-top: -50px;"></section>
+  <section class="section" style="margin-top: -20px;"></section>
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class=" column is-full-width has-text-centered">
@@ -343,7 +369,7 @@
 
 
 
-  <section class="section" style="margin-top: -50px;"></section>
+  <section class="section" style="margin-top: -20px;"></section>
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class=" column is-full-width has-text-centered">
@@ -369,7 +395,137 @@
 
 
 
-  <section class="section" style="margin-top: 0px;">
+
+  <section class="section" style="margin-top: 25px;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width has-text-centered">
+          <h2 class="title is-3">The <b><span style="color: rgb(0, 180, 139);">E</span><span style="color: rgb(239, 99, 75);">X</span><span style="color: rgb(99, 113, 250);">Po</span></b> Dataset</h2>
+          <p>The structure and sequence information among the <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span>, 
+            <span style="color: rgb(239, 99, 75);"><b>Drone</b></span>, and 
+            <span style="color: rgb(99, 113, 250);"><b>Quadruped</b></span> platforms in our benchmark.
+          </p>
+          <div class="table-container" style="overflow-x: auto; width: 100%; margin: 0 auto 20px;">
+            <table class="table is-bordered is-striped is-hoverable is-centered" style="min-width: 950px;">
+              <thead>
+                <tr>
+                  <th style="vertical-align: middle;">Platform</th>
+                  <th style="vertical-align: middle;">Sequence Name</th>
+                  <th style="vertical-align: middle;"># Frames</th>
+                  <th style="vertical-align: middle;">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Vehicle Platform -->
+                <tr>
+                  <td rowspan="6"><b>Vehicle</b></td>
+                  <td><code>horse</code></td>
+                  <td>714</td>
+                  <td rowspan="6" style="color: rgb(0, 180, 139); font-weight: bold;">43,766</td>
+                </tr>
+                <tr>
+                  <td><code>penno_small_loop</code></td>
+                  <td>1,102</td>
+                </tr>
+                <tr>
+                  <td><code>rittenhouse</code></td>
+                  <td>9,752</td>
+                </tr>
+                <tr>
+                  <td><code>ucity_small_loop</code></td>
+                  <td>16,867</td>
+                </tr>
+                <tr>
+                  <td><code>city_hall</code></td>
+                  <td>7,453</td>
+                </tr>
+                <tr>
+                  <td><code>penno_big_loop</code></td>
+                  <td>7,878</td>
+                </tr>
+  
+                <!-- Drone Platform -->
+                <tr>
+                  <td rowspan="7"><b>Drone</b></td>
+                  <td><code>fast_flight_1</code></td>
+                  <td>2,229</td>
+                  <td rowspan="7" style="color: rgb(239, 99, 75); font-weight: bold;">19,899</td>
+                </tr>
+                <tr>
+                  <td><code>fast_flight_2</code></td>
+                  <td>4,077</td>
+                </tr>
+                <tr>
+                  <td><code>penno_parking_1</code></td>
+                  <td>2,810</td>
+                </tr>
+                <tr>
+                  <td><code>penno_parking_2</code></td>
+                  <td>2,713</td>
+                </tr>
+                <tr>
+                  <td><code>penno_plaza</code></td>
+                  <td>1,694</td>
+                </tr>
+                <tr>
+                  <td><code>penno_cars</code></td>
+                  <td>3,073</td>
+                </tr>
+                <tr>
+                  <td><code>penno_trees</code></td>
+                  <td>3,303</td>
+                </tr>
+  
+                <!-- Quadruped Platform -->
+                <tr>
+                  <td rowspan="8"><b>Quadruped</b></td>
+                  <td><code>penno_short_loop</code></td>
+                  <td>2,942</td>
+                  <td rowspan="8" style="color: rgb(99, 113, 250); font-weight: bold;">25,563</td>
+                </tr>
+                <tr>
+                  <td><code>skatepark_1</code></td>
+                  <td>2,305</td>
+                </tr>
+                <tr>
+                  <td><code>skatepark_2</code></td>
+                  <td>1,652</td>
+                </tr>
+                <tr>
+                  <td><code>srt_green_loop</code></td>
+                  <td>1,597</td>
+                </tr>
+                <tr>
+                  <td><code>srt_under_bridge_1</code></td>
+                  <td>5,083</td>
+                </tr>
+                <tr>
+                  <td><code>srt_under_bridge_2</code></td>
+                  <td>4,533</td>
+                </tr>
+                <tr>
+                  <td><code>art_plaza_loop</code></td>
+                  <td>3,615</td>
+                </tr>
+                <tr>
+                  <td><code>rocky_steps</code></td>
+                  <td>3,836</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><hr>
+    </div>
+  </section>
+
+
+
+  </br>
+
+
+
+  <section class="section" style="margin-top: -20px;">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full-width has-text-centered">
@@ -380,87 +536,87 @@
           <div class="columns is-multiline">
             <!-- Row 1 -->
             <div class="column is-3">
-              <img src="./static/images/pie_charts/road.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 1">
+              <img src="./static/images/pie_charts/road.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Road</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/sidewalk.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 2">
+              <img src="./static/images/pie_charts/sidewalk.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Sidewalk</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/building.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 3">
+              <img src="./static/images/pie_charts/building.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Building</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/wall.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 4">
+              <img src="./static/images/pie_charts/wall.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Wall</b></p>
             </div>
   
             <!-- Row 2 -->
             <div class="column is-3">
-              <img src="./static/images/pie_charts/fence.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 5">
+              <img src="./static/images/pie_charts/fence.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Fence</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/pole.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 6">
+              <img src="./static/images/pie_charts/pole.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Pole</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/traffic-light.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 7">
+              <img src="./static/images/pie_charts/traffic-light.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Traffic Light</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/traffic-sign.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 8">
+              <img src="./static/images/pie_charts/traffic-sign.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Traffic Sign</b></p>
             </div>
   
             <!-- Row 3 -->
             <div class="column is-3">
-              <img src="./static/images/pie_charts/vegetation.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 9">
+              <img src="./static/images/pie_charts/vegetation.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Vegetation</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/terrain.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 10">
+              <img src="./static/images/pie_charts/terrain.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Terrain</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/sky.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 11">
+              <img src="./static/images/pie_charts/sky.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Sky</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/person.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 12">
+              <img src="./static/images/pie_charts/person.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Person</b></p>
             </div>
   
             <!-- Row 4 -->
             <div class="column is-3">
-              <img src="./static/images/pie_charts/rider.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 13">
+              <img src="./static/images/pie_charts/rider.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Rider</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/car.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 14">
+              <img src="./static/images/pie_charts/car.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Car</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/truck.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 15">
+              <img src="./static/images/pie_charts/truck.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Truck</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/bus.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 16">
+              <img src="./static/images/pie_charts/bus.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Bus</b></p>
             </div>
   
             <!-- Row 5 -->
             <div class="column is-3">
-              <img src="./static/images/pie_charts/train.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 17">
+              <img src="./static/images/pie_charts/train.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Train</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/motorcycle.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 18">
+              <img src="./static/images/pie_charts/motorcycle.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Motorcycle</b></p>
             </div>
             <div class="column is-3">
-              <img src="./static/images/pie_charts/bicycle.png" style="width: 100%; border-radius: 10px;" alt="Subfigure 19">
+              <img src="./static/images/pie_charts/bicycle.png" style="width: 100%; border-radius: 10px;" loading="lazy">
               <p class="has-text-centered"><b>Bicycle</b></p>
             </div>
           </div><hr>
@@ -488,9 +644,9 @@
                 <th style="vertical-align: middle;">ID</th>
                 <th style="vertical-align: middle;">Class</th>
                 <th style="vertical-align: middle;">Type</th>
-                <th style="vertical-align: middle;"><img src="./static/images/vehicle.png" style="height: 24px;"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span></th>
-                <th style="vertical-align: middle;"><img src="./static/images/drone.png" style="height: 24px;"> <span style="color: rgb(239, 99, 75);"><b>Drone</b></span></th>
-                <th style="vertical-align: middle;"><img src="./static/images/quadruped.png" style="height: 24px;"> <span style="color: rgb(99, 113, 250);"><b>Quadruped</b></span></th>
+                <th style="vertical-align: middle;"><img src="./static/images/vehicle.png" style="height: 24px;" loading="lazy"> <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span></th>
+                <th style="vertical-align: middle;"><img src="./static/images/drone.png" style="height: 24px;" loading="lazy"> <span style="color: rgb(239, 99, 75);"><b>Drone</b></span></th>
+                <th style="vertical-align: middle;"><img src="./static/images/quadruped.png" style="height: 24px;" loading="lazy"> <span style="color: rgb(99, 113, 250);"><b>Quadruped</b></span></th>
               </tr>
             </thead>
             <tbody>
@@ -498,153 +654,153 @@
                 <td style="vertical-align: middle;">0</td>
                 <td style="vertical-align: middle;"><code>road</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_road_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_road_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_road_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_road_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_road_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_road_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">1</td>
                 <td style="vertical-align: middle;"><code>sidewalk</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_sidewalk_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_sidewalk_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_sidewalk_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_sidewalk_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_sidewalk_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_sidewalk_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">2</td>
                 <td style="vertical-align: middle;"><code>building</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_building_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_building_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_building_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_building_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_building_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_building_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">3</td>
                 <td style="vertical-align: middle;"><code>wall</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_wall_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_wall_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_wall_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_wall_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_wall_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_wall_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">4</td>
                 <td style="vertical-align: middle;"><code>fence</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_fence_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_fence_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_fence_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_fence_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_fence_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_fence_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">5</td>
                 <td style="vertical-align: middle;"><code>pole</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_pole_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_pole_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_pole_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_pole_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_pole_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_pole_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">6</td>
                 <td style="vertical-align: middle;"><code>traffic-light</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_traffic-light_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_traffic-light_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_traffic-light_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_traffic-light_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_traffic-light_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_traffic-light_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">7</td>
                 <td style="vertical-align: middle;"><code>traffic-sign</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_traffic-sign_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_traffic-sign_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_traffic-sign_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_traffic-sign_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_traffic-sign_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_traffic-sign_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">8</td>
                 <td style="vertical-align: middle;"><code>vegetation</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_vegetation_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_vegetation_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_vegetation_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_vegetation_parula.png" style="height: 100px; object-fit: contain;"loading="lazy" ></td>
+                <td><img src="./static/images/prior_drone/class_vegetation_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_vegetation_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">9</td>
                 <td style="vertical-align: middle;"><code>terrain</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_terrain_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_terrain_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_terrain_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_terrain_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_terrain_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_terrain_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">10</td>
                 <td style="vertical-align: middle;"><code>sky</code></td>
                 <td style="vertical-align: middle;">static</td>
-                <td><img src="./static/images/prior_vehicle/class_sky_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_sky_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_sky_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_sky_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_sky_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_sky_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">11</td>
                 <td style="vertical-align: middle;"><code>person</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_person_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_person_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_person_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_person_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_person_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_person_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">12</td>
                 <td style="vertical-align: middle;"><code>rider</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_rider_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_rider_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_rider_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_rider_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_rider_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_rider_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">13</td>
                 <td style="vertical-align: middle;"><code>car</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_car_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_car_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_car_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_car_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_car_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_car_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">14</td>
                 <td style="vertical-align: middle;"><code>truck</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_truck_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_truck_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_truck_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_truck_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_truck_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_truck_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">15</td>
                 <td style="vertical-align: middle;"><code>bus</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_bus_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_bus_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_bus_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_bus_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_bus_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_bus_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">16</td>
                 <td style="vertical-align: middle;"><code>train</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_train_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_train_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_train_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_train_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_train_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_train_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">17</td>
                 <td style="vertical-align: middle;"><code>motorcycle</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_motorcycle_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_motorcycle_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_motorcycle_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_motorcycle_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_motorcycle_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_motorcycle_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
               <tr>
                 <td style="vertical-align: middle;">18</td>
                 <td style="vertical-align: middle;"><code>bicycle</code></td>
                 <td style="vertical-align: middle;">dynamic</td>
-                <td><img src="./static/images/prior_vehicle/class_bicycle_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_drone/class_bicycle_parula.png" style="height: 100px; object-fit: contain;"></td>
-                <td><img src="./static/images/prior_quadruped/class_bicycle_parula.png" style="height: 100px; object-fit: contain;"></td>
+                <td><img src="./static/images/prior_vehicle/class_bicycle_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_drone/class_bicycle_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
+                <td><img src="./static/images/prior_quadruped/class_bicycle_parula.png" style="height: 100px; object-fit: contain;" loading="lazy"></td>
               </tr>
             </tbody>
           </table>
@@ -667,7 +823,7 @@
               <span style="color: rgb(0, 180, 139);"><b>Vehicle</b></span> to 
               <span style="color: rgb(239, 99, 75);"><b>Drone</b></span></h2>
             <p><b>Note:</b> Target is trained with ground truth from the target domain. All scores are given in percentage (%). The best and second best scores under each metric are highlighted in colors.</p>
-            <div class="table-container" style="overflow-x: auto; width: 100%; max-width: 1000px; margin-bottom: 20px;">
+            <div class="table-container" style="overflow-x: auto; width: 100%; max-width: 950px; margin-bottom: 20px;">
               <table class="table is-bordered is-striped is-hoverable" style="width: 100%; table-layout: auto;">
                 <thead>
               <tr>
@@ -878,7 +1034,7 @@
             <span style="color: rgb(99, 113, 250);"><b>Quadruped</b></span>
           </h2>
           <p><b>Note:</b> Target is trained with ground truth from the target domain. All scores are given in percentage (%). The best and second best scores under each metric are highlighted in colors.</p>
-          <div class="table-container" style="overflow-x: auto; width: 100%; max-width: 1000px; margin-bottom: 20px;">
+          <div class="table-container" style="overflow-x: auto; width: 100%; max-width: 950px; margin-bottom: 20px;">
             <table class="table is-bordered is-striped is-hoverable" style="width: 100%; table-layout: auto;">
               <thead>
                 <tr>
@@ -1107,10 +1263,10 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre style="border-radius: 10px;"><code>@inproceedings{kong2025eventfly,
-  title   = {EventFly: Event Camera Perception from Ground to the Sky},
-  author  = {Lingdong Kong and Dongyue Lu and Xiang Xu and Lai Xing Ng and Wei Tsang Ooi and Benoit R. Cottereau},
-  journal = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year    = {2025},
+  title     = {EventFly: Event Camera Perception from Ground to the Sky},
+  author    = {Lingdong Kong and Dongyue Lu and Xiang Xu and Lai Xing Ng and Wei Tsang Ooi and Benoit R. Cottereau},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2025},
 }</code></pre>
   <hr>
     </div>
@@ -1147,5 +1303,7 @@
   </footer>
 
 </body>
+
+
 
 </html>
